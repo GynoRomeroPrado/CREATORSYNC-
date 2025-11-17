@@ -38,7 +38,7 @@ reportlab==4.0.7
 PyPDF2==3.0.1
 
 # Tax Forms
-irs-tax-forms==0.1.0  # Custom or use reportlab
+# irs-tax-forms==0.1.0  # Note: This package doesn't exist in PyPI - use reportlab for PDF generation
 
 # Data Processing
 pandas==2.1.3

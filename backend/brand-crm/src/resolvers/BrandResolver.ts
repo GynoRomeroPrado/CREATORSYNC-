@@ -37,7 +37,7 @@ export class BrandResolver {
   ): Promise<Brand> {
     const brandRepo = AppDataSource.getRepository(Brand);
 
-    const brand = brand Repo.create({
+    const brand = brandRepo.create({
       name,
       website,
       industry,

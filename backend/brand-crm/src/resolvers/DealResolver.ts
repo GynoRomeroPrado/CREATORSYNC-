@@ -1,4 +1,4 @@
-import { Resolver, Query, Mutation, Arg, Int, Float } from "type-graphql";
+import { Resolver, Query, Mutation, Arg, Int, Float, ObjectType, Field } from "type-graphql";
 import { Deal, DealStage, DealStatus } from "../entities/Deal";
 import { AppDataSource } from "../data-source";
 
