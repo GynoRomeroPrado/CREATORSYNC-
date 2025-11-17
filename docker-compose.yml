@@ -129,6 +129,27 @@ services:
       - ./backend/attribution-engine:/app
     command: celery -A app.celery_app worker --loglevel=info
 
+  # Tax Optimizer API
+  tax-optimizer-api:
+    build:
+      context: ./backend/tax-optimizer
+      dockerfile: Dockerfile
+    container_name: creatorsync-tax-optimizer-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    ports:
+      - "8002:8002"
+    environment:
+      DATABASE_URL: postgresql://creatorsync:creatorsync_dev_password@postgres:5432/creatorsync
+      REDIS_URL: redis://redis:6379/1
+    volumes:
+      - ./backend/tax-optimizer:/app
+      - ./backend/tax-optimizer/uploads:/app/uploads
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload
+
   # Frontend Web App
   web-app:
     build:
