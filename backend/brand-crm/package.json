@@ -1,0 +1,47 @@
+{
+  "name": "creatorsync-brand-crm",
+  "version": "1.0.0",
+  "description": "Brand CRM for creator partnerships and deals",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "codegen": "graphql-codegen",
+    "test": "jest"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.13.0",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "pg": "^8.11.3",
+    "typeorm": "^0.3.17",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^2.0.0-beta.6",
+    "class-validator": "^0.14.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^5.1.1",
+    "ioredis": "^5.3.2",
+    "axios": "^1.6.2",
+    "docusign-esign": "^6.4.0",
+    "nodemailer": "^6.9.7",
+    "date-fns": "^2.30.0",
+    "uuid": "^9.0.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/express": "^4.17.21",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/nodemailer": "^6.4.14",
+    "@types/uuid": "^9.0.7",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  }
+}
